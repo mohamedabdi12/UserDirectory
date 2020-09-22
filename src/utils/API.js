@@ -1,8 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
+
+const BASEURL = 'https://randomuser.me/api/';
+const OPTIONS = '?results=100&nat=US&inc=name,email,phone,dob,picture,id';
 
 export default {
-    getUsers: function () {
-
-        return axios.get("https://randomuser.me/api/?results=200&nat=us");
+    getUsers: () => {
+        return axios.get(BASEURL + OPTIONS);
     }
 };
